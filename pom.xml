@@ -1,0 +1,73 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>at.goosefraba</groupId>
+    <artifactId>aws-step-function-activity-example</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+    <name>AWS Step Function Activity Example</name>
+
+    <organization>
+        <name>goosefraba GmbH</name>
+        <url>https://www.goosefraba.at/</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Bernhard Keprt</name>
+            <email>bernhard.keprt@goosefraba.at</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/goosefraba/aws-step-function-activity-example</url>
+    </scm>
+
+    <properties>
+        <aws-lambda-java-core.version>1.1.0</aws-lambda-java-core.version>
+        <aws-lambda-java-log4j.version>1.0.0</aws-lambda-java-log4j.version>
+        <aws-lambda-java-events.version>1.3.0</aws-lambda-java-events.version>
+        <aws-java-sdk.version>1.11.123</aws-java-sdk.version>
+
+        <apache-http-core.version>4.4.6</apache-http-core.version>
+        <hamcrest-core.version>1.3</hamcrest-core.version>
+        <hamcrest-bean.version>1.0.11</hamcrest-bean.version>
+        <mockito.version>1.10.19</mockito.version>
+        <gson.version>2.7</gson.version>
+        <java.mail.version>1.4.7</java.mail.version>
+        <junit.version>4.12</junit.version>
+
+        <maven.compiler.plugin.version>2.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.jdk.version>1.8</maven.compiler.plugin.jdk.version>
+        <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-stepfunctions</artifactId>
+            <version>${aws-java-sdk.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.plugin.jdk.version}</source>
+                    <target>${maven.compiler.plugin.jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
